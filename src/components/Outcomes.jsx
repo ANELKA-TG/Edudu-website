@@ -1,11 +1,7 @@
 import boyImg from '../assets/page1-schoolboy.png'
 import checkImg from '../assets/check.png'
 
-const outcomes = [
-  'Master program knowledge at school',
-  'The ability to criticize knowledge increases',
-  'Respond confidently when encountering difficult situations',
-];
+import { outcomes } from '../data/teachers' 
 
 const Outcomes = () => {
   return (

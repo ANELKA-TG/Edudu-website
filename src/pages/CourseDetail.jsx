@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FaPlay } from 'react-icons/fa';
-import { courses, defaultDetails } from '../data/courses';
+import { courses} from '../data/courses';
+import { defaultDetails } from '../data/coursedetails';
 import SimilarCourses from '../components/Courses/SimilarCourses';
 import ContactCTA from '../components/ContactCTA';
 import videoImg from '../assets/freelesson.png';
+import check from '../assets/check.png'
+import star from '../assets/star.png'
+import more from '../assets/rightarr.png'
+import less from '../assets/leftarr.png'
 
 const CourseDetail = () => {
   const { id } = useParams();
@@ -44,8 +49,11 @@ const CourseDetail = () => {
           <p>
             Number of lessons: <strong>{course.lessons} Lesson</strong>
             <button className="detail-top__link" onClick={() => setShowMore(!showMore)}>
-              View detail {showMore ? '▴' : '▾'}
-            </button>
+            <div className='viewdetails'>
+              <div>View detail</div> 
+             <div> {showMore ? <img src={less}/> : <img src={more}/> } </div>
+            </div>
+              </button>
           </p>
           {showMore && (
             <p className="detail-top__more">
@@ -56,9 +64,10 @@ const CourseDetail = () => {
           <p>Completion time: <strong>{course.duration}</strong></p>
           <p>Teacher: <span className="detail-top__purple">{course.teacher}</span></p>
           <p>Students have learned: <strong>{course.learners}</strong></p>
-          <p>
-            Review: <span className="stars">{'★'.repeat(course.rating)}</span>
-          </p>
+          
+          <div className='coursereview'>
+           <div> <p>Review: </p> </div> <div> <img src={star} alt="" /> </div>
+          </div>
 
           <p className="detail-top__price">Price: <strong>{course.price}$</strong></p>
 
@@ -85,7 +94,7 @@ const CourseDetail = () => {
         <ul>
           {course.learn.map((item, i) => (
             <li key={i}>
-              <span className="check">✔</span>
+              {<span className="check"> <img src={check} alt="" />  </span>}
               {item}
             </li>
           ))}

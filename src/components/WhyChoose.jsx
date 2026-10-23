@@ -23,7 +23,6 @@ const reasons = [
   },
 ];
 
-
 const WhyChoose = () => {
   return (
      <section className="why">

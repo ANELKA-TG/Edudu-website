@@ -1,14 +1,6 @@
 import { useState } from 'react';
 import classImg from '../assets/freelesson.png';
-import audio from '../assets/audio.png';
-import live from '../assets/live.png';
-import recorded from '../assets/record.png';
-
-const tabs = [
-  { id: 'audio', label: 'Audio Classes', icon: audio },
-  { id: 'live', label: 'Live Classes', icon: live },
-  { id: 'recorded', label: 'Recorded Class', icon: recorded },
-];
+import { tabs } from '../data/teachers';
 
 const ClassPreview = () => {
   const [active, setActive] = useState('live');

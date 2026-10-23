@@ -1,14 +1,5 @@
-import mathIcon from '../assets/math.png'
-import litIcon from '../assets/literature.png'
-import engIcon from '../assets/english.png'
-import artIcon from '../assets/arts.png'
 
-const subjects = [
-  { id: 1, name: 'Math', icon: mathIcon },
-  { id: 2, name: 'Literature', icon: litIcon },
-  { id: 3, name: 'English', icon: engIcon },
-  { id: 4, name: 'Art', icon: artIcon },
-];
+import { subjects } from "../data/teachers"
 
 const Subjects = () => {
   return (

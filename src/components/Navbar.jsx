@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from "react-router-dom";
 import logo from '../assets/logo.png'
+import menu from '../assets/menu.png'
 
 const Navbar = () => {
     const [open,setOpen]=useState(false);
@@ -24,8 +25,8 @@ const Navbar = () => {
         <button className="btn-text">Sign up</button>
         <button className="btn-dark">Log in</button>
         <button className="navbar__burger" onClick={() => setOpen(!open)}>
-  ☰
-        </button>
+<img src={menu} alt="menu" />   
+  </button>
       </div>
     </header>
   )

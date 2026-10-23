@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 import studentsImg from '../../assets/Ander.png';
+import studentsImg1 from '../../assets/Bird.png'
+import studentsImg2 from '../../assets/Bill.png'
+import studentsImg3 from '../../assets/Blink.png'
 
 const CourseCard = ({ course }) => (
   <Link to={`/courses/${course.id}`} className="course-card-link">
@@ -8,8 +11,13 @@ const CourseCard = ({ course }) => (
       <div className="course-card__image">
         <img src={course.image} alt={course.title} />
         <div className="course-card__students">
+          <div className='studentimg'>
           <img src={studentsImg} alt="" />
-          <span>+ {course.students} students</span>
+          <img  src={studentsImg1} alt="" />
+          <img  src={studentsImg2} alt="" />
+          <img  src={studentsImg3} alt="" />
+          </div>
+          <span> + {course.students} students</span>
         </div>
       </div>
 
